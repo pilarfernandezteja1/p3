@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url('https://media.giphy.com/media/9ekitZrmQ1EI/source.gif');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        h1 {
+            color: #fff;
+            text-align: center;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        fieldset {
+            border: none;
+            margin-bottom: 20px;
+        }
+        legend {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="checkbox"] {
+            margin-top: 5px;
+            margin-bottom: 10px;
+        }
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para el contenedor de secciones */
+        .contenedor {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+        }
+        .contenedor li {
+            flex: 1;
+            text-align: center;
+        }
+        .contenedor a {
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .contenedor li:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Estilos para el área de resultados */
+        #resultados {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: 20px auto;
+        }
+        #resultados h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        #resultados ul {
+            padding: 0;
+        }
+        #resultados li {
+            margin-bottom: 5px;
+        }
+        #resultados .correcta {
+            color: green;
+        }
+        #resultados .incorrecta {
+            color: red;
+        }
+
+        /* Estilos para el mensaje introductorio */
+        .pregunta p {
+            color: #000; /* Color negro */
+        }
+    </style>
+</head>
+<body> 
+    <h1>De Madrid al cielo</h1>
+    <!-- Contenedor de secciones -->
+    <ul class="contenedor">
+        <li><a href="musical.html">Musical</a></li>
+        <li><a href="deportivo.html">Deportivo</a></li>
+        <li><a href="cultural.html">Cultural</a></li>
+    </ul>
+    <!-- Formulario de reserva -->
+    <form action="#" method="post" id="formulario">
+        <h2>Realice una reserva</h2>
+        <fieldset>
+            <legend>Datos personales</legend>
+            <label for="name_id">Nombre:</label><br>
+            <input type="text" id="name_id" name="nombre" required><br>
+            <label for="phone_id">Teléfono:</label><br>
+            <input type="text" id="phone_id" name="telefono" required><br>
+            <label for="email_id">Email:</label><br>
+            <input type="text" id="email_id" name="email" required><br>
+        </fieldset>
+        <fieldset>
+            <legend>Evento</legend>
+            <label for="fecha_id">Fecha:</label><br>
+            <input type="date" id="fecha_id" name="fecha"><br>
+            <label for="tipo_id">Tipo:</label><br>
+            <select id="tipo_id" name="tipo">
+                <option value="Musical">Musical</option>
+                <option value="Deportivo">Deportivo</option>
+                <option value="Cultural">Cultural</option>
+            </select><br>
+            <label for="nombre_evento_id">Nombre del evento:</label><br>
+            <input type="text" id="nombre_evento_id" name="nombre_evento"><br>
+            <label for="numeropersonas_id">Número de personas:</label><br>
+            <input type="number" id="numeropersonas_id" name="numeropersonas" min="1"><br>
+            <p class="pregunta">Descuentos aplicables:</p> <!-- Texto "Descuentos aplicables" -->
+            <ul>
+                <li><input type="checkbox" id="descuento-1_id" name="descuento1"><label for="descuento-1_id">Familia numerosa</label></li>
+                <li><input type="checkbox" id="descuento-2_id" name="descuento2"><label for="descuento-2_id">Carnet de estudiante</label></li>
+                <li><input type="checkbox" id="descuento-3_id" name="descuento3"><label for="descuento-3_id">Discapacidad</label></li>
+            </ul>
+        </fieldset>
+        <p class="pregunta">¡Demuestra tus conocimientos sobre la ciudad de Madrid y consigue descuentos en nuestros servicios!</p>
+        <fieldset id="preguntas-fieldset">
+            <!-- Las preguntas se agregarán aquí dinámicamente -->
+        </fieldset>
+        <fieldset>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Cancelar">
+        </fieldset>
+    </form>
+
+    <!-- Área para mostrar los resultados -->
+    <div id="resultados">
+        <h2>Resultados del cuestionario</h2>
+        <ul id="lista-resultados"></ul>
+    </div>
+
+    <script>
+        // Función para cargar los datos de la API y generar las preguntas
+        async function cargarPreguntas() {
+            try {
+                const response = await fetch('api.json');
+                const data = await response.json();
+                const preguntas = data.results;
+
+                // Seleccionamos el fieldset donde se agregarán las preguntas
+                const preguntasFieldset = document.getElementById('preguntas-fieldset');
+
+                // Iteramos sobre las preguntas y las agregamos al fieldset
+                preguntas.forEach((pregunta, index) => {
+                    // Creamos un nuevo fieldset para cada pregunta
+                    const fieldset = document.createElement('fieldset');
+                    const legend = document.createElement('legend');
+                    legend.textContent = pregunta.question;
+                    fieldset.appendChild(legend);
+
+                    // Agregamos las opciones para las preguntas de opción múltiple
+                    if (pregunta.type === 'multiple') {
+                        const opciones = pregunta.incorrect_answers.concat(pregunta.correct_answer);
+                        opciones.sort(() => Math.random() - 0.5); // Mezclamos las opciones
+
+                        opciones.forEach(opcion => {
+                            const input = document.createElement('input');
+                            input.type = 'radio';
+                            input.id = `${opcion}_${index}`;
+                            input.name = `respuesta_${index}`;
+                            input.value = opcion === pregunta.correct_answer ? 'True' : 'False';
+
+                            const label = document.createElement('label');
+                            label.setAttribute('for', `${opcion}_${index}`);
+                            label.textContent = opcion;
+
+                            fieldset.appendChild(input);
+                            fieldset.appendChild(label);
+                            fieldset.appendChild(document.createElement('br'));
+                        });
+                    } else if (pregunta.type === 'boolean') { // Para preguntas de verdadero/falso
+                        const verdaderoInput = document.createElement('input');
+                        verdaderoInput.type = 'radio';
+                        verdaderoInput.id = `verdadero_${index}`;
+                        verdaderoInput.name = `respuesta_${index}`;
+                        verdaderoInput.value = 'True';
+
+                        const verdaderoLabel = document.createElement('label');
+                        verdaderoLabel.setAttribute('for', `verdadero_${index}`);
+                        verdaderoLabel.textContent = 'Verdadero';
+
+                        const falsoInput = document.createElement('input');
+                        falsoInput.type = 'radio';
+                        falsoInput.id = `falso_${index}`;
+                        falsoInput.name = `respuesta_${index}`;
+                        falsoInput.value = 'False';
+
+                        const falsoLabel = document.createElement('label');
+                        falsoLabel.setAttribute('for', `falso_${index}`);
+                        falsoLabel.textContent = 'Falso';
+
+                        fieldset.appendChild(verdaderoInput);
+                        fieldset.appendChild(verdaderoLabel);
+                        fieldset.appendChild(falsoInput);
+                        fieldset.appendChild(falsoLabel);
+                    }
+
+                    preguntasFieldset.appendChild(fieldset);
+                });
+            } catch (error) {
+                console.error('Error al cargar las preguntas:', error);
+            }
+        }
+
+        // Llamamos a la función al cargar la página
+        window.addEventListener('DOMContentLoaded', cargarPreguntas);
+
+        // Función para procesar el envío del formulario
+        const formulario = document.getElementById('formulario');
+        formulario.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Obtenemos todas las respuestas del formulario
+            const respuestas = {};
+            const preguntas = document.querySelectorAll('[id^="preguntas-fieldset"] fieldset');
+
+            preguntas.forEach((pregunta, index) => {
+                const respuesta = pregunta.querySelector('input[type="radio"]:checked');
+                if (respuesta) {
+                    const preguntaIndex = respuesta.name.split('_')[1];
+                    const preguntaText = pregunta.querySelector('legend').textContent;
+                    const respuestaText = respuesta.value === 'True' ? 'Correcta' : 'Incorrecta';
+                    respuestas[`Pregunta ${parseInt(preguntaIndex) + 1}: ${preguntaText}`] = respuestaText;
+                }
+            });
+
+            // Mostramos los resultados
+            mostrarResultados(respuestas);
+        });
+
+        // Función para mostrar los resultados en el área correspondiente
+        function mostrarResultados(respuestas) {
+            const listaResultados = document.getElementById('lista-resultados');
+            listaResultados.innerHTML = ''; // Limpiamos los resultados anteriores
+
+            // Iteramos sobre las respuestas y las agregamos a la lista
+            for (const [pregunta, resultado] of Object.entries(respuestas)) {
+                const item = document.createElement('li');
+                item.textContent = `${pregunta}: ${resultado}`;
+                if (resultado === 'Correcta') {
+                    item.classList.add('correcta');
+                } else {
+                    item.classList.add('incorrecta');
+                }
+                listaResultados.appendChild(item);
+            }
+        }
+    </script>
+</body>
+</html>

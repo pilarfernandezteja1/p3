@@ -1,0 +1,51 @@
+{
+    "response_code": 0,
+    "results": [
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Geografía",
+        "question": "¿Cuál es la calle más larga de Madrid?",
+        "correct_answer": "Alcalá",
+        "incorrect_answers": ["López de Hoyos", "Paseo de la Castellana", "Arturo Soria"],
+        "respuestas": []
+      },
+      {
+        "type": "boolean",
+        "difficulty": "easy",
+        "category": "Cultura",
+        "question": "¿Es el Palacio Real de Madrid el más grande de Europa?",
+        "correct_answer": "True",
+        "incorrect_answers": ["False"],
+        "respuestas": []
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Televisión",
+        "question": "¿En qué calle de Madrid residen los personajes de Aquí no hay quien viva?",
+        "correct_answer": "Calle del Desengaño",
+        "incorrect_answers": ["Calle Huertas", "Mirador de Montepinar", "Calle del Amor Hermoso"],
+        "respuestas": []
+      },
+      {
+        "type": "multiple",
+        "difficulty": "medium",
+        "category": "Actualidad",
+        "question": "¿Cuál ha sido el último sitio de Madrid en incorporarse a la lista de Patrimonio de la Humanidad por la Unesco?",
+        "correct_answer": "El Paisaje de la Luz",
+        "incorrect_answers": ["Las Cuatro Torres", "La Real Casa de Correos", "El Banco de España"],
+        "respuestas": []
+      },
+      {
+        "type": "multiple",
+        "difficulty": "easy",
+        "category": "Deporte",
+        "question": "¿Qué equipo de fútbol fue nombrado Mejor Club del Siglo XX?",
+        "correct_answer": "Real Madrid",
+        "incorrect_answers": ["Atlético de Madrid", "Rayo Vallecano", "Getafe"],
+        "respuestas": []
+      }
+    ]
+  }
+  
